@@ -6,9 +6,9 @@
 - **Best practices for endpoint URLs**
 - **Validation**: Data Annotation would be applied
 
-## 1. Review Entity
+## Review Entity
 
 Create an entity called `Review` which includes:
-- `Id` (int): Primary key
+- `Id` (Guid): Primary key
 - `Description` (string): Review description
 - `Rating` (int): Rating score (1-5)
