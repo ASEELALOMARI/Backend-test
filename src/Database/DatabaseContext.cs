@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using test.src.MVC.Model;
 
 namespace backendTest.src.Database
 {
@@ -26,6 +27,9 @@ namespace backendTest.src.Database
             .EnableDetailedErrors()
             .UseSnakeCaseNamingConvention();
         }
+
+        public DbSet<Review> Reviews { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 

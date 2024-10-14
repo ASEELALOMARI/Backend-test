@@ -2,6 +2,8 @@ using backendTest.src.Database;
 using backendTest.src.Mapper;
 using Microsoft.EntityFrameworkCore;
 using Npgsql;
+using test.src.Abstraction;
+using test.src.MVC.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +26,8 @@ builder.Services.AddDbContext<DatabaseContext>(options =>
     .UseNpgsql(dataSource);
 }
 );
+
+builder.Services.AddScoped<IReviewServices, ReviewServices>();
 
 builder.Services.AddAutoMapper(typeof(MapperProfile).Assembly);
 
